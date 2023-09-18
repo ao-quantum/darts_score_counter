@@ -86,14 +86,14 @@ fn take_turn(player_i: u32, player_score: u32) -> u32 {
         return player_score;
     }
 
-    if (turn_score as u32) > player_score {
+    if turn_score > player_score {
         println!(
             "Turn exceeded player score. Player {} stays on {}",
             player_i, player_score
         );
         return player_score;
     }
-    let new_score = player_score - (turn_score as u32);
+    let new_score = player_score - turn_score;
     println!(
         "Player {} score: {} -> {}",
         player_i, player_score, new_score
